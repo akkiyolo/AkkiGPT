@@ -1,5 +1,8 @@
 from langchain_core.messages import HumanMessage
 from agent import get_agent
+from database import init_db
+
+init_db()
 
 agent = get_agent("gemini-2.5-flash")
 
@@ -13,7 +16,7 @@ for message, metadata in agent.stream(
     {
         "messages": [
             HumanMessage(
-                content="Generate a blog about demis hessabis"
+                content="What is my name?"
             )
         ]
     },
