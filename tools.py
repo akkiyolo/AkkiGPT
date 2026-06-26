@@ -63,6 +63,8 @@ def search_uploaded_documents(query: str) -> str:
     )
 
 
+
+
 @tool
 def remember_this(memory: str) -> str:
     """
@@ -76,6 +78,7 @@ def remember_this(memory: str) -> str:
     )
 
 
+
 @tool
 def recall_memory(query: str) -> str:
     """
@@ -86,6 +89,9 @@ def recall_memory(query: str) -> str:
         thread_id=CURRENT_THREAD_ID,
         query=query
     )
+
+
+
 
 
 tools = [
